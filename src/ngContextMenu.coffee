@@ -90,6 +90,9 @@ angular.module 'ngContextMenu', []
             item: item
             $event: event
           })
+          
+      scope.$on "updateDone", (event, args) ->
+          hideMenu();
 
       hideMenu = () ->
         dropmenu.css({

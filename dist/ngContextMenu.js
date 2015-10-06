@@ -85,6 +85,9 @@
               });
             }
           };
+          scope.$on("updateDone", function(event, args) {
+            return hideMenu();
+          });
           hideMenu = function() {
             dropmenu.css({
               top: 0,
